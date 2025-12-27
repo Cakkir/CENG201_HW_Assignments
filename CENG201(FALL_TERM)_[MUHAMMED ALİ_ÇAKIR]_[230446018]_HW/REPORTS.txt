@@ -1,0 +1,55 @@
+        
+
+
+	**PatientList
+	//                    Linked list                  Array list
+        // add()                  O(n)         enqueue        O(1)
+        // remove()               O(n)         dequeue        O(1)
+        // find()                 O(n)         -
+        // print()                O(n)         print          O(n)
+        //
+        // In this task, a singly linked list was preferred because the situation involves patients being dynamically added and removed from the system.
+        // Linked lists offer a flexible structure when the number of elements is unknown.
+        // Additionally, removing patients from the system does not occur the shifting cost, unlike array lists.
+        // This is significant advantage especially for a hospital management system where patient admission and discharge procedures occur frequently.
+        // In this situation, where random access in not necessary , the browsing cost of the linked list is acceptable.
+        // Therefore, the goal is to better understand node based data management and reference concepts using this data structure.
+
+	**TreatmentQueue
+	// In this task, queue data structure was preferred.
+        // Because it is important to treat the first coming patient firstly, last coming patient lastly for the justice in the hospital system.
+        // " TreatmentRequest " class has been created to represent treatment requests and each request stores the patient's ID number and the time that the patient was entered the system.
+        // The queue data structure has been manually prepared based on a linked list.
+        // Enqueue and dequeue operations is performed using the front and rear values in the queue.
+        // The enqueue operation works by adding the new treatment request to the end of the queue and only requires updating the rear value.
+        // So , the time complexity of enqueue operation is O(1).
+        // Similarly , the dequeue operation removes the element at the front of the queue and only require updating the front value.
+        // This operation also does not require any browsing in the queue so the time complexity of dequeue operation is O(1).
+        // The printQueue method , which prints all elements in the queue so method has O(n) time complexity of because it browses all nodes.
+        // If a stack were used instead of a queue in this scenario , the last coming patient will be treated first so it will be unfair situation .
+        // So queue data structure is the most suitable one for treatment management.
+
+	**DischargeStack
+	// Purpose of this task is managing the records of discharged patients with using Stack data structure.
+        // It is easy and fast to reach the last discharged patient with using stacks because of LIFO(Last In First Out) rule.
+        // The stack data structure has been manually prepared based on linked list structure.
+        // Push, pop and peek operations is performed using the top value in the stack.
+        // Push() , Pop() and Peek() methods has O(1) time complexity because they do not require any browsing.
+        // But the printStack() method requires browsing for printing all the elements so it has O(n) time complexity.
+	
+	**HospitalSystem
+	// In this task, a hospital management system has been developed to manage patient enterances, treatment processes and discharge operations.
+        // Many data structures are used together.
+        // The patients that entered the system are stored in a singly linked list.
+        // The linked list was chosen because it makes it easy to add and delete patients.
+        // The insertion, deletion and browsing operations in this structure have O(n) time complexity.
+        // Patients that waiting treatment are managed with using queue data structure which contains FIFO rules.
+        // In this way, the patients treated in a sequence and with justice.
+        // Enqueue and dequeue operations have O(n) time complexity.
+        // Additionally, the system has upgraded to support priority patients.
+        // Priority patients treated before normal patients.
+        // Patients that who complete treatment are transferred to a stack structure.
+        // The stack structure was chosen.
+        // It works with LIFO rules which is suitable for the system that holds discharged patients.
+        // Because last discharged patients should be more accessible compared to others.
+        // Push and pop operations have O(n) time complexity.
